@@ -1,6 +1,8 @@
 # StateDesign
 
-A bank needs to manage different states of customer accounts, including active, suspended, and closed. Each state has specific rules and restrictions regarding allowed operations, and accounts have associated attributes like account number and balance. **Active accounts:** Allow deposits and withdrawals. 
+A bank needs to manage different states of customer accounts, including active, suspended, and closed. Each state has specific rules and restrictions regarding allowed operations, and accounts have associated attributes like account number and balance.
+
+**Active accounts:** Allow deposits and withdrawals. 
 
 **Suspended accounts:** Disallow deposits and withdrawals transactions, but allow viewing account information. 
 
@@ -13,7 +15,7 @@ Implement the State pattern to improve code maintainability and flexibility:
 **2. Implement State Behaviors:** Each concrete state class implements the AccountState interface, providing specific behavior for its respective state. For example, the ActiveState class would allow deposits and withdrawals, while the ClosedState wouldn't allow any transactions.
 
 **3. Update Account Class:**
-  Include attributes for accountNumber and balance.
-  Remove state-specific logic from the Account class.
-  Introduce a reference to the current AccountState object.
-  Delegate actions like deposit, withdraw, activate, suspend, and close to the current state object through its corresponding     methods.
+  - Include attributes for accountNumber and balance.
+  - Remove state-specific logic from the Account class.
+  - Introduce a reference to the current AccountState object.
+  - Delegate actions like deposit, withdraw, activate, suspend, and close to the current state object through its corresponding     methods.
